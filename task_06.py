@@ -9,13 +9,3 @@ def rps_game_winner(turns):
     else:
         return " ".join(turns[0])
 
-
-
-
-#
-#rps_game_winner([['player1', 'P'], ['player2', 'S'], ['player3', 'S']]) #=> WrongNumberOfPlayersError
-#rps_game_winner([['player1', 'P'], ['player2', 'A']]) #=> NoSuchStrategyError
-# rps_game_winner([['player1', 'P'], ['player2', 'S']]) #=> 'player2 S'
-# print(rps_game_winner([['player1', 'P'], ['player2', 'S']])) #=> 'player2 S'
-# rps_game_winner([['player1', 'P'], ['player2', 'P']]) #=> 'player1 P'
-# print(rps_game_winner([['player1', 'P'], ['player2', 'P']])) #=> 'player1 P'

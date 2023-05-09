@@ -5,9 +5,8 @@ def combine_anagrams(words_array):
         preres_dict.setdefault(sorted_word, []).append(word)
     res = [value for value in preres_dict.values()]
 
-
     return res
 
 
-# print(combine_anagrams(["cars", "fOr", "potatoes", "rAcs", "four", "scar",
-# "creams", "scream"]))
+print(combine_anagrams(["cars", "fOr", "potatoes", "rAcs", "four", "scar",
+                        "creams", "scream"]))

@@ -1,30 +1,22 @@
 def sort_list(list):
     if not list:
         return []
-    min = float('+inf')
-    max = float('-inf')
-    for elem in list:     # масимальное и минимальное значение
-        if elem > max:
-            max = elem
-        if elem < min:
-            min = elem
+    minimum_value = min(list)
+    maximum_value = max(list)
+
     min_indexes = []
     max_indexes = []
-    for id, value in enumerate(list):   # индексы максимальных и минимальных значений
-        if value == max:
+    for id, value in enumerate(list):
+        if value == maximum_value:
             max_indexes.append(id)
-        elif value == min:
+        elif value == minimum_value:
             min_indexes.append(id)
 
     for index in min_indexes:
-        list[index] = max
+        list[index] = maximum_value
+
     for index in max_indexes:
-        list[index] = min
-    list.append(min)
+        list[index] = minimum_value
+
+    list.append(minimum_value)
     return list
-
-
-print(sort_list([])) # => []
-print(sort_list([2, 4, 6, 8])) # => [8, 4, 6, 2, 2]
-print(sort_list([1])) # => [1, 1]
-print(sort_list([1, 2, 1, 3])) # => [3, 2, 3, 1, 1]
