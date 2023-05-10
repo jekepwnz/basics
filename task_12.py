@@ -40,4 +40,4 @@ class JellyBean(Dessert):
         self.__flavor = flavor
 
     def is_delicious(self):
-        return isinstance(self.__flavor, str) and self.__flavor == "black licorice"
+        return not self.__flavor == "black licorice"

@@ -9,4 +9,4 @@ def count_words(string):
     for word in string:
         result[word] = result.get(word, 0) + 1
 
-    print(result)
+    return result

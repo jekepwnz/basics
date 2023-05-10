@@ -1,11 +1,10 @@
-def coincidence(*args):
+def coincidence(lst=None, rng=None):
     result = []
-    if len(args) == 2:
-        result = [i for i in args[0] if i in args[1]]
+    if lst is None or rng is None:
+        return result
+    listed_rng = list(rng)
+    listed_rng = [i for i in range(listed_rng[0] * 10, (listed_rng[-1] + 1) * 10)]
+    for elem in lst:
+        if isinstance(elem, (int, float)) and elem * 10 in listed_rng:
+            result.append(elem)
     return result
-
-def coincidence_2(list=[], range=0):
-    result = [i for i in list if i in range]
-    return result
-
-
